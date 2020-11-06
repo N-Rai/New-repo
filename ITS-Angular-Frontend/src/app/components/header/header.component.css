@@ -1,0 +1,21 @@
+.header{
+  background-color: #4895ef;
+  height: 20vh;
+
+}
+.header-text-title{
+  margin-top: 10px;
+  font-size: 50px;
+  font-family: "Copperplate Gothic Bold";
+  color: white;
+}
+.header-text{
+  position: absolute;
+  padding-left: 23%;
+
+}
+.header-text-subtitle {
+  font-size: 17px;
+  color: white;
+  padding-bottom: 10px;
+}
