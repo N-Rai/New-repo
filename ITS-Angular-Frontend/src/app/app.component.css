@@ -1,6 +1,5 @@
-.webapp-body{
-  background-color: #4895ef;
-  margin-left: 15%;
-  margin-right: 15%;
-  height: 100vh;
+.body{
+  min-height: 900px;
+  background-color: azure;
+  padding: 30px;
 }

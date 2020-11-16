@@ -1,0 +1,37 @@
+.header{
+  background-color: #007BFF;
+  height: 120px;
+  width: 100%;
+
+}
+.header-text-title{
+  margin-top: 1px;
+  font-size: 50px;
+  font-family: "Copperplate Gothic Bold";
+  color: white;
+}
+.header-text{
+  position: absolute;
+  margin-left: 25%;
+
+}
+.header-text-subtitle {
+  font-size: 17px;
+  color: white;
+
+}
+.header-profile{
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+.header-profile-register{
+  float: left;
+  color: white;
+  background: transparent;
+}
+.header-profile-Login{
+  float: right;
+  color: white;
+  background: transparent;
+}
