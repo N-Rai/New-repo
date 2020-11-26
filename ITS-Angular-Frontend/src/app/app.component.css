@@ -1,5 +1,9 @@
 .body{
-  min-height: 900px;
+  min-height: 700px;
   background-color: azure;
   padding: 30px;
+}
+.footer{
+  height: 100px;
+  background-color: #007BFF;
 }

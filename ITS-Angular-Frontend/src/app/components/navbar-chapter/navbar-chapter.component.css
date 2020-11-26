@@ -1,13 +1,8 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-
-}
 
 .my-navbar{
   background-color: #0652dd;
 }
+
 
 .nav-item .nav-link{
   color:white;

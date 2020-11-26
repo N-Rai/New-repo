@@ -1,7 +1,9 @@
-// @ts-ignore
+;
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'// @ts-ignore
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 
+import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -14,7 +16,11 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 
 import {SharedModule} from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import {FormsModule} from '@angular/forms';
+import { AnnouncementComponent } from './components/announcement/announcement.component';
+import { LinksComponent } from './components/links/links.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+
 
 
 
@@ -25,14 +31,19 @@ import {FormsModule} from '@angular/forms';
     MessageComponent,
     LoginComponent,
     ResetPasswordComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    AnnouncementComponent,
+    LinksComponent,
+    FooterComponent
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     SharedModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

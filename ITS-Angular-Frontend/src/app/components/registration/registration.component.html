@@ -1,37 +1,43 @@
 
   <div class="registration-form">
 
-    <form>
+    <h1 style="text-align: center"> Registration </h1>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
       <div class="form-group">
-        <label for="inputName">Name</label>
-        <input type="text"
+        <label for="inputName">First name</label>
+        <input type="text"  name="firstname" ngModel required #firstname="ngModel"
                class="form-control"
                id="inputName"
-               placeholder="Enter your name">
+               placeholder="Enter your first name">
       </div>
       <div class="form-group">
         <label for="inputSurname">Surname</label>
-        <input type="text"
+        <input type="text"  name="surname" ngModel required #surname="ngModel"
                class="form-control"
                id="inputSurname"
                placeholder="Enter your surname">
       </div>
       <div class="form-group">
         <label for="inputEmail">Email address</label>
-        <input type="email"
+        <input type="email"  name="email" ngModel required #email="ngModel"
                class="form-control"
                id="inputEmail"
                placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="inputPassword">Password</label>
-        <input type="password"
+        <input type="password"  name="password" ngModel required #password="ngModel"
                class="form-control"
                id="inputPassword"
                placeholder="Password">
       </div>
+      <div class="modal-footer">
+        <button type="submit" [disabled]="f.invalid"
+                class="btn btn-primary btn-lg">Register <i class="fas fa-sign-in-alt"></i></button>
+      </div>
 
-      <button type="submit" class="btn btn-primary btn-lg">Register <i class="fas fa-sign-in-alt"></i></button>
+
     </form>
   </div>
 
