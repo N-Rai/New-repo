@@ -9,14 +9,14 @@
 
     <div class="form-group">
       <label for="inputEmail">Email address</label>
-      <input type="email" name="email" ngModel required #email="ngModel"
+      <input type="email"  [(ngModel)]="loginUserData.email" name="email" ngModel required #email="ngModel"
              class="form-control"
              id="inputEmail1"
              placeholder="Enter your email">
     </div>
     <div class="form-group">
       <label for="inputPassword1">Password</label>
-      <input type="password" name="password" ngModel required #password="ngModel"
+      <input type="password"  [(ngModel)]="loginUserData.password" name="password" ngModel required #password="ngModel"
              class="form-control"
              id="inputPassword1"
              placeholder="Password">
@@ -26,9 +26,9 @@
       <!--<a [routerLink]="['/reset-password']">Forgot password</a>-->
       <a (click)="openResetPassword()">Forgot password</a>
     </div>
-    <button type="submit" [disabled]="f.invalid"
+    <button (click)="loginUser()"  type="button" [disabled]="f.invalid"
             class="btn btn-primary btn-lg">Login <i class="fas fa-sign-in-alt"> </i></button>
     <br>
-    <span style="margin-left: 50px">Don't have an account?<a (click)="openRegistration()">Register</a> </span>
+    <span style="margin-left: 100px">Don't have an account?<a (click)="openRegistration()" style="color: #007BFF">Register</a> </span>
   </form>
 </div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SpellTheorieComponent} from './nv-components/spell-theorie/spell-theorie.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-navbar-chapter',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarChapterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
+
 
 }

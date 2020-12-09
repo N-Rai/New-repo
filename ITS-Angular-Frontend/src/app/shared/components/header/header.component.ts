@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
+
 import {LoginComponent} from '../../../components/login/login.component';
 import {RegistrationComponent} from '../../../components/registration/registration.component';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ResetPasswordComponent} from '../../../components/reset-password/reset-password.component';
+
+import {AuthService} from '../../../service/auth.service';
 
 
 @Component({
@@ -12,12 +16,15 @@ import {ResetPasswordComponent} from '../../../components/reset-password/reset-p
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal,
+              public _authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  openLoginForm(): void {
+
+
+ /* openLoginForm(): void {
     const modalRef = this.modalService.open(LoginComponent);
   }
 
@@ -26,12 +33,9 @@ export class HeaderComponent implements OnInit {
   }
   openResetPasswordForm(): void{
     const modalRef = this.modalService.open(ResetPasswordComponent);
-  }
+  }*/
 
-/*  btnClick = function() {
-    this.router.navigateByUrl('/register');
-    console.log('button is clicked');
-  };*/
+
 
 
 

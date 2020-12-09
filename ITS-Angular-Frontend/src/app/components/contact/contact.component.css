@@ -1,0 +1,23 @@
+.body{
+  width: 70%;
+  padding: 30px;
+  margin:auto;
+  background-color: whitesmoke;
+  min-height: 700px;
+}
+.contact-content{
+  margin: 1em;
+}
+.contact-content-email{
+  margin-bottom: 3em;
+  margin-top: 3em;
+  margin-left: 5em;
+}
+
+.contact-content-msg{
+  margin-left: 5em;
+  margin-bottom: 3em;
+}
+.contact-content-btn{
+  margin-left: 5em;
+}
