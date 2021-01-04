@@ -11,6 +11,8 @@ import {Router} from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
 
+  emailExists:boolean = false;
+
   registerUserData = {
     name: undefined,
     surname: undefined,
@@ -26,13 +28,12 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(f: NgForm) {
-
-    /*const registerObserver = {
+   /* const registerObserver = {
       next: x => console.log('User is registered'),
       error: err => console.log( err)
-    };*/
+    };
     console.log(f.value);
-   /* this.authService.Register(f.value).
+    this.authService.Register(f.value).
     subscribe(
       res => {
         console.log(res)
@@ -41,9 +42,7 @@ export class RegistrationComponent implements OnInit {
       },
       err => console.log(err)
     );*/
-
-    }
-
+  }
 
   registerUser() {
     this.authService.Register(this.registerUserData).
@@ -52,8 +51,11 @@ export class RegistrationComponent implements OnInit {
         console.log(res)
         localStorage.setItem('token', res.token)
         this.route.navigate(['/home'])
+
       },
-      err => console.log(err)
+      error => {
+        this.emailExists = error.error.status == 409 ? true : false
+      }
     );
   }
 }

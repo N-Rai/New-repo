@@ -24,8 +24,9 @@ import {AnnouncementComponent} from './components/announcement/announcement.comp
 import {AuthService} from './service/auth.service';
 import {AuthGuard} from './auth.guard';
 import {TokenInterceptorService} from './service/token-interceptor.service';
-import { ContactComponent } from './components/contact/contact.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import {NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 // @ts-ignore
 @NgModule({
@@ -42,7 +43,6 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     SpellPraktishComponent,
     LeesPraktishComponent,
     AnnouncementComponent,
-    ContactComponent,
     AboutMeComponent
 
   ],
@@ -52,7 +52,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     SharedModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbAlertModule
   ],
   providers: [AuthService, AuthGuard,
     {

@@ -1,5 +1,5 @@
 .body{
-  width: 70%;
+  width: 75%;
   padding: 30px;
   margin:auto;
   background-color: whitesmoke;
@@ -12,4 +12,12 @@
   height:300px;
   float: right;
   background-color: orange;
+}
+
+.email-section{
+  margin: auto;
+  border-style: solid;
+  border-width: medium;
+  border-color: orange;
+  width: 35%;
 }

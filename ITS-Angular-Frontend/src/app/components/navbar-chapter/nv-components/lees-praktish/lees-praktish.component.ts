@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../../../service/auth.service';
 
 @Component({
   selector: 'app-lees-praktish',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeesPraktishComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public _authService: AuthService) { }
 
   ngOnInit(): void {
   }

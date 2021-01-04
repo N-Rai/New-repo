@@ -1,33 +1,42 @@
-
 <div class="login-form">
   <h1 style="text-align: center"> Log In</h1>
 
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 
-  <!--  <p> Form value: {{f.value | json}}</p>
-    <p> Form valid: {{f.valid}}</p>-->
+    <!--  <p> Form value: {{f.value | json}}</p>
+      <p> Form valid: {{f.valid}}</p>-->
 
     <div class="form-group">
       <label for="inputEmail">Email address</label>
-      <input type="email"  [(ngModel)]="loginUserData.email" name="email" ngModel required #email="ngModel"
-             class="form-control"
-             id="inputEmail1"
-             placeholder="Enter your email">
+      <input #email="ngModel" [(ngModel)]="loginUserData.email" class="form-control" id="inputEmail1" name="email"
+             ngModel
+             placeholder="Enter your email"
+             required
+             type="email">
+      <div class="validation-errors">
+        <small *ngIf="emailNotExist">There is no user with the following email address.</small>
+      </div>
     </div>
     <div class="form-group">
       <label for="inputPassword1">Password</label>
-      <input type="password"  [(ngModel)]="loginUserData.password" name="password" ngModel required #password="ngModel"
-             class="form-control"
-             id="inputPassword1"
-             placeholder="Password">
+      <input #password="ngModel" [(ngModel)]="loginUserData.password" class="form-control" id="inputPassword1"
+             name="password" ngModel
+             placeholder="Password"
+             required
+             type="password">
+
+      <div class="validation-errors">
+        <small *ngIf="passwordNotMatch">Incorrect Password</small>
+      </div>
     </div>
     <div class="form-check">
       <input type="checkbox">
       <!--<a [routerLink]="['/reset-password']">Forgot password</a>-->
       <a (click)="openResetPassword()">Forgot password</a>
     </div>
-    <button (click)="loginUser()"  type="button" [disabled]="f.invalid"
-            class="btn btn-primary btn-lg">Login <i class="fas fa-sign-in-alt"> </i></button>
+
+    <button (click)="loginUser()" [disabled]="f.invalid" class="btn btn-primary btn-lg"
+            type="button">Login <i class="fas fa-sign-in-alt"> </i></button>
     <br>
     <span style="margin-left: 100px">Don't have an account?<a (click)="openRegistration()" style="color: #007BFF">Register</a> </span>
   </form>

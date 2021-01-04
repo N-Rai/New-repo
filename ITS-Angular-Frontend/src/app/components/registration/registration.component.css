@@ -5,3 +5,7 @@
   background-color: whitesmoke;
 
 }
+
+.validation-errors{
+  color: red;
+}

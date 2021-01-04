@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {RegistrationComponent} from '../registration/registration.component';
-import {ResetPasswordComponent} from '../reset-password/reset-password.component';
 import {AuthService} from '../../service/auth.service';
 import {Router} from '@angular/router';
+import {NgForm} from '@angular/forms';
 
 
 @Component({
@@ -13,6 +11,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  emailNotExist: boolean = false;
+  passwordNotMatch: boolean = false;
 
   loginUserData = {
     password: undefined,
@@ -27,25 +28,22 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
+  onSubmit(f: NgForm) {}
 
-  onSubmit(f: NgForm) {
-
-    // console.log(f.value);
-    /*this.authService.login(f.value).subscribe(
-      res => console.log(res),
-      err => console.log(err),
-    );*/
-
-  }
   loginUser() {
     this.authService.login(this.loginUserData)
       .subscribe(
       res => {
         console.log(res)
         localStorage.setItem('token', res.token)
+        localStorage.setItem('role', res.roles)
         this.route.navigate(['/home'])
       },
-      err => console.log(err),
+      error =>{
+        this.emailNotExist = error.error.status == 404 ? true : false
+        this.passwordNotMatch = error.error.status == 403 ? true : false
+        console.log(error.error.status)
+      }
     );
   }
   openRegistration() {
@@ -57,6 +55,5 @@ export class LoginComponent implements OnInit {
     this.route.navigate(['/reset-password'])
     //const modalRef =  this.modalService.open(ResetPasswordComponent)
   }
-
 
 }

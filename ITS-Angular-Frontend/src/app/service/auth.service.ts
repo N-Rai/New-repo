@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
 
 
-class user {
+
+export class user {
  private email : string;
  private name : string;
  private surname: string;
@@ -43,6 +44,12 @@ export class AuthService {
 
   logoutUser() {
     localStorage.removeItem('token');
+    localStorage.removeItem('role');
     this._router.navigate(['/home']);
   }
+
+  getRole(){
+     return localStorage.getItem('role')
+  }
+
 }

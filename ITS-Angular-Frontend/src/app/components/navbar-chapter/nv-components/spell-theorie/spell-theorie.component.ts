@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../../../service/auth.service';
 
 @Component({
   selector: 'app-spell-theorie',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpellTheorieComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _authService: AuthService) { }
 
   ngOnInit(): void {
   }

@@ -10,7 +10,6 @@ import {SpellPraktishComponent} from './components/navbar-chapter/nv-components/
 import {SpellTheorieComponent} from './components/navbar-chapter/nv-components/spell-theorie/spell-theorie.component';
 import {AnnouncementComponent} from './components/announcement/announcement.component';
 import {AboutMeComponent} from './components/about-me/about-me.component';
-import {ContactComponent} from './components/contact/contact.component';
 
 import {RouterModule, Routes} from '@angular/router';
 import {AuthGuard} from './auth.guard';
@@ -23,13 +22,12 @@ const routes: Routes = [
   {path: 'register', component: RegistrationComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
   {path: 'about-me', component: AboutMeComponent},
-  {path: 'contact', component: ContactComponent,canActivate: [AuthGuard]},
   {path: 'lees-theorie', component: LeesTheorieComponent, canActivate: [AuthGuard]},
   {path: 'lees-praktish', component: LeesPraktishComponent, canActivate: [AuthGuard]},
-  {path: 'schr-theorie', component: SchrTheorieComponent},
-  {path: 'schr-praktish', component: SchrPraktishComponent},
-  {path: 'spell-theorie', component: SpellTheorieComponent},
-  {path: 'spell-praktish', component: SpellPraktishComponent}
+  {path: 'schr-theorie', component: SchrTheorieComponent,  canActivate: [AuthGuard]},
+  {path: 'schr-praktish', component: SchrPraktishComponent, canActivate: [AuthGuard]},
+  {path: 'spell-theorie', component: SpellTheorieComponent, canActivate: [AuthGuard]},
+  {path: 'spell-praktish', component: SpellPraktishComponent, canActivate: [AuthGuard]}
 
 
 ];
