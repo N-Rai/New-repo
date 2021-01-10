@@ -9,12 +9,16 @@
   padding-top: 15px;
   padding-left: 20px;
   padding-bottom: 20px;
-  min-height: 550px;
+  height: auto;
+
+}
+.upload-announcement{
 
 }
 
 .upload-btn{
-  float: right;
+  float: left;
+  margin: auto;
 }
 
 .announcements_topic{
@@ -23,4 +27,17 @@
 
 .announcements_text{
   float: left;
+}
+.validation-errors{
+  color: red;
+}
+.announcements_topic{
+  padding: 3px;
+}
+
+.announcements_text{
+  padding: 3px;
+}
+.upload-success{
+  color: green;
 }
