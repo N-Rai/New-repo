@@ -41,3 +41,19 @@
 .upload-success{
   color: green;
 }
+.button{
+  display: block;
+}
+.announcement-edit{
+  width: 50px;
+  height: 25px;
+  font-size: small;
+  background-color: #06d6a0;
+  margin-right: 1px;
+}
+.announcement-delete{
+  width: 50px;
+  height: 25px;
+  font-size: small;
+  background-color: #e5383b;
+}

@@ -7,11 +7,15 @@
       <th scope="col">Posted on</th>
     </tr>
     </thead>
-    <tbody *ngFor = "let annunce of AnnouncementsToDisplay;" >
+    <tbody *ngFor = "let announce of AnnouncementsToDisplay;" >
     <tr>
-      <td> {{annunce.topic}} </td>
-      <td> {{annunce.text }} </td>
-      <td> {{annunce.createdAt| date: 'longDate' }} </td>
+      <td> {{announce.topic}} </td>
+      <td> {{announce.text }} </td>
+      <td> {{announce.createdAt | date: 'd MMM' }} </td>
+      <td>
+        <button class="announcement-edit" (click)="EditAnnouncement(announce.id)">Edit</button>
+        <button class="announcement-delete" (click)="DeleteAnnouncement(announce.id)">Delete</button>
+      </td>
     </tr>
 
     </tbody>
@@ -30,13 +34,11 @@
     <div class="announcements_text" >
      <textarea [(ngModel)]="announcementData.text" cols="138" id="inputMessage"
                placeholder=" Enter the announcement" rows="2" type="text"></textarea>
-      <!--<div class="upload-success">
-        <small *ngIf="successful">Announcement is uploaded.</small>
-      </div>-->
+
     </div>
     <div class="upload-btn">
       <button (click)="UploadAnnouncement()" class="btn btn-primary btn-lg"
-              type="button">Post</button>
+              type="button">POST</button>
     </div>
   </div>
 
