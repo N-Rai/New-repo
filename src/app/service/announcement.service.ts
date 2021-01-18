@@ -26,12 +26,12 @@ export class AnnouncementService {
   }
 
   //Update specific announcement
-  UpdateAnnouncement(id: number, value: any): Observable<any>{
-    return this.http.put(this.announcementUrl + '', value)
+  UpdateAnnouncement(value: any): Observable<any>{
+    return this.http.put(this.announcementUrl + 'admin/update/', value)
   }
 
   //Delete the announcement
-  DeleteAnnouncement(id: number) {
-    return this.http.delete(this.announcementUrl+'')
+  DeleteAnnouncement(topic: string) {
+    return this.http.delete(this.announcementUrl+'admin/delete?topic='+topic)
   }
 }

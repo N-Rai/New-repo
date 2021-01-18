@@ -13,8 +13,8 @@
       <td> {{announce.text }} </td>
       <td> {{announce.createdAt | date: 'd MMM' }} </td>
       <td>
-        <button class="announcement-edit" (click)="EditAnnouncement(announce.id)">Edit</button>
-        <button class="announcement-delete" (click)="DeleteAnnouncement(announce.id)">Delete</button>
+        <button class="announcement-edit" (click)="EditAnnouncement(announce)">Edit</button>
+        <button class="announcement-delete" (click)="DeleteAnnouncement(announce.topic)">Delete</button>
       </td>
     </tr>
 
@@ -29,6 +29,9 @@
       <div class="validation-errors">
         <small *ngIf="topicExists">Announcement with this topic already exists.</small>
       </div>
+      <div class="validation-errors">
+        <small *ngIf="topicNotExists">Announcement with this topic does not exist. Cannot be updated. Try again.</small>
+      </div>
     </div>
 
     <div class="announcements_text" >
@@ -38,7 +41,7 @@
     </div>
     <div class="upload-btn">
       <button (click)="UploadAnnouncement()" class="btn btn-primary btn-lg"
-              type="button">POST</button>
+              type="button">{{action}}</button>
     </div>
   </div>
 
