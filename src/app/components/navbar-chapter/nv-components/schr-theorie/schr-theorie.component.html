@@ -1,0 +1,22 @@
+<div class="body">
+
+  <div class="files-section">
+    <h5>Schrijfvaardifheid theorie</h5>
+    <div class="files" style="background-color: black; ">
+
+    </div>
+
+  </div>
+
+  <div *ngIf="_authService.getRole() == 'ROLE_ADMIN'" class="file-upload-form">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Choose the file you want to upload</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <br>
+        <button  type="button"
+                 class="btn btn-primary btn-lg">Upload</button>
+      </div>
+    </form>
+  </div>
+</div>

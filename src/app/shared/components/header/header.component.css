@@ -1,0 +1,37 @@
+.header{
+  background-color: #007BFF;
+  height: 50px;
+  width: 100%;
+
+}
+.header-text-title{
+  font-size: 50px;
+  color: white;
+}
+.header-text{
+  position: absolute;
+  margin: auto auto auto 100px;
+  text-align: center;
+
+}
+.header-text-subtitle {
+  font-size: 17px;
+  color: white;
+
+}
+.header-profile{
+  float: right;
+  margin-right: 20px;
+  margin-top: 40px;
+}
+.header-profile-register{
+  float: left;
+  color: white;
+  background: transparent;
+
+}
+.header-profile-Login{
+  float: right;
+  color: white;
+  background: transparent;
+}

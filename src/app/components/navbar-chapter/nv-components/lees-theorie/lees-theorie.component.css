@@ -1,0 +1,19 @@
+.body{
+  width: 75%;
+  padding: 30px;
+  margin:auto;
+  background-color: whitesmoke;
+  min-height: 700px;
+  position: relative;
+}
+
+.file-upload-form{
+  width: 95%;
+  margin: auto;
+  border-color: orange ;
+  border-width: medium;
+  border-style: solid;
+  position: absolute;
+  bottom: 5px;
+  padding:5px ;
+}

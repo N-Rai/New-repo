@@ -1,0 +1,59 @@
+.announcements{
+  width: 70%;
+  float: left;
+}
+.links{
+  float: right;
+  width:28%;
+  background-color: #E4F2F2;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  height: auto;
+
+}
+.upload-announcement{
+
+}
+
+.upload-btn{
+  float: left;
+  margin: auto;
+}
+
+.announcements_topic{
+  float: left;
+}
+
+.announcements_text{
+  float: left;
+}
+.validation-errors{
+  color: red;
+}
+.announcements_topic{
+  padding: 3px;
+}
+
+.announcements_text{
+  padding: 3px;
+}
+.upload-success{
+  color: green;
+}
+.button{
+  display: block;
+}
+.announcement-edit{
+  width: 50px;
+  height: 25px;
+  font-size: small;
+  background-color: #06d6a0;
+  margin-right: 1px;
+}
+.announcement-delete{
+  width: 50px;
+  height: 25px;
+  font-size: small;
+  background-color: #e5383b;
+}
