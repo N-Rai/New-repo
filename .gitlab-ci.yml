@@ -1,5 +1,5 @@
 image: cypress/base:10
 cypress-e2e:
   script:
-      - npm install --only=dev
+      - npm install
       - npm run cy:e2e
