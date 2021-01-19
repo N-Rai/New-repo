@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
       res => {
         console.log(res)
+        this.authService.setAuth(res.token, res.roles);
         localStorage.setItem('token', res.token)
         localStorage.setItem('role', res.roles)
         this.route.navigate(['/home'])

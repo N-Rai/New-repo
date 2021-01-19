@@ -18,7 +18,8 @@ export class user {
 export class AuthService {
 
    private authUrl="http://localhost:8083/users/";
-
+   private token;
+   private role;
    constructor( private http: HttpClient,
                 private _router: Router) { }
 
@@ -31,15 +32,15 @@ export class AuthService {
   }
 
   loggedIn() {
-     return !!localStorage.getItem('token');
+     return !!this.token;
   }
 
   Registered(){
-    return !!localStorage.getItem('token');
+    return !!this.token;
   }
 
   getToken() {
-     return localStorage.getItem('token');
+     return this.token;
   }
 
   logoutUser() {
@@ -47,9 +48,13 @@ export class AuthService {
     localStorage.removeItem('role');
     this._router.navigate(['/home']);
   }
-
+  setAuth(token, role=undefined){
+   this.token = token;
+   this.role = role;
+  }
   getRole(){
-     return localStorage.getItem('role')
+     console.log(localStorage)
+     return this.role
   }
 
 }

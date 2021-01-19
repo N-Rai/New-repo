@@ -49,6 +49,7 @@ export class RegistrationComponent implements OnInit {
     subscribe(
       res => {
         console.log(res)
+        this.authService.setAuth(res.token)
         localStorage.setItem('token', res.token)
         this.route.navigate(['/home'])
 
