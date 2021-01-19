@@ -46,6 +46,8 @@ export class AuthService {
   logoutUser() {
     localStorage.removeItem('token');
     localStorage.removeItem('role');
+    this.token = undefined;
+    this.role = undefined;
     this._router.navigate(['/home']);
   }
   setAuth(token, role=undefined){
@@ -53,7 +55,6 @@ export class AuthService {
    this.role = role;
   }
   getRole(){
-     console.log(localStorage)
      return this.role
   }
 
