@@ -48,7 +48,7 @@ export class AuthService {
     localStorage.removeItem('role');
     this.token = undefined;
     this.role = undefined;
-    this._router.navigate(['/home']);
+    this._router.navigate(['/']);
   }
   setAuth(token, role=undefined){
    this.token = token;

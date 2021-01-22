@@ -43,7 +43,7 @@ export class AnnouncementComponent implements OnInit {
     if (this.announcementList.length > 6)
       this.AnnouncementsToDisplay = this.announcementList.slice(this.announcementList.length - 7, this.announcementList.length);
     else this.AnnouncementsToDisplay = this.announcementList;
-    //console.log("Announcement2display"+this.AnnouncementsToDisplay);
+    
   }
 
   //Gets all the announcements
@@ -121,8 +121,14 @@ export class AnnouncementComponent implements OnInit {
           this.GetAllAnnouncements()
         }
       );
+  }
 
-
+  IsRegistered() {
+    if(this._authService.Registered() == null){
+      return false;
+    }
+    else
+      return  true;
   }
 
 

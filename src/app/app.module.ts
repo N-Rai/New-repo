@@ -8,8 +8,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { SharedModule} from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
-
-import { MessageComponent} from './components/message/message.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent} from './components/registration/registration.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
@@ -32,7 +30,6 @@ import {NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
-    MessageComponent,
     LoginComponent,
     ResetPasswordComponent,
     RegistrationComponent,
