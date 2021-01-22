@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This application intents students to register to get information from the teacher and also download the files uploaded by the admin i.e. teacher.
 
-##Installation
+## Installation
 
 Clone the project to your local PC. Your PC must have Angular CLI installed and bootstrap. 
 
